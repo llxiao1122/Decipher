@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """Decipher/scripts/send_msg.py — Telegram Bot API 封装（标准库 urllib，零依赖）。
 
-与 Cipher 版区别：去掉了 mem 依赖（record_rate/rate_interval 写 Cipher 的
-tg_rate 命名空间）。Decipher 只读不写，限流状态用进程内变量代替。
+Decipher 只读不写，限流状态用进程内变量代替。
 """
 import json
 import logging

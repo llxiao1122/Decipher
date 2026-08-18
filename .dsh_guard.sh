@@ -7,7 +7,7 @@ for i in 1 2 3; do
     if ss -tln 2>/dev/null | grep -q ":3080 "; then
         break
     fi
-    ( cd /home/admin/Decipher && setsid dsh --profile core --trusted-host 43.108.50.106:8080 >> /home/admin/.dsh/vps-dsh.log 2>&1 < /dev/null & )
+    ( cd /home/admin/Decipher && setsid dsh --profile web --host 0.0.0.0 --trusted-host 43.108.50.106 >> /home/admin/.dsh/vps-dsh.log 2>&1 < /dev/null & )
     sleep 12
     ss -tln 2>/dev/null | grep -q ":3080 " && break
 done
